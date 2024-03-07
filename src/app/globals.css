@@ -1,25 +1,32 @@
 :root {
-
   /* Global Variables */
-  --main-color: lightblue;
+  --main-background-color: #ffffff;
 
-  /* Component Specific Variables */
-  --box-color: #fff;
+  --cta-color: #f7f0f2;
+
+  --headlines-color: #000000cc;
+
+  --dropdown-color: #000000;
+
+  --main-pink-color: #fa96aa;
+
+  --box-shadow-color: #00000029;
+
+  --savings-color: #f3eded;
+
+  --body-text-color: #707070;
+
+  --footer-box-color: #d9d9d9;
 }
 
 @media (prefers-color-scheme: dark) {
-
   :root {
-    
     /* Global Variables */
     --main-color: #333;
 
-
     /* Component Specific Variables */
     --box-color: rgb(235, 235, 160);
-
   }
-
 }
 
 * {
@@ -30,20 +37,18 @@
 
 html,
 body {
-  background-color: var(--main-color);
+  background-color: var(--main-background-color-color);
 }
 
 body {
-  background-color: var(--main-color);
-  ;
+  background-color: var(--main-background-color-color-color);
+  width: 100%; /* Site width to 100% */
 }
 
 a {
   color: inherit;
   text-decoration: underline;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   html {
