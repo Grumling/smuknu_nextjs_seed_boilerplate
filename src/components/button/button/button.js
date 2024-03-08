@@ -3,7 +3,7 @@ import styles from './button.module.css'
 
 function Button({ title, link }) {
   return (
-    <div className={styles.footerButtonContainer}>
+    <div className={styles.buttonContainer}>
       <Link target='_blank' href={link}>
         {title}
       </Link>
