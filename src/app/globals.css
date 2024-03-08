@@ -8,6 +8,10 @@
 
   --dropdown-color: #000000;
 
+  --font-dark-color: #000000;
+
+  --font-light-color: #ffffff;
+
   --main-pink-color: #fa96aa;
 
   --box-shadow-color: #00000029;
@@ -47,7 +51,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {

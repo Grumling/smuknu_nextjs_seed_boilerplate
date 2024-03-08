@@ -1,4 +1,4 @@
-import { QuicksanddFont } from '@/utils/fonts'
+import { QuicksandFont } from '@/utils/fonts'
 import './globals.css'
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={QuicksanddFont.className}>
+      <body className={QuicksandFont.className}>
         {/* <span>[root layout]</span> */}
         {children}
       </body>
