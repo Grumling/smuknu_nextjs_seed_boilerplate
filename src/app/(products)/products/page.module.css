@@ -1,0 +1,27 @@
+.page {
+  background: var(--main-background-color);
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+}
+
+.colorChangePink {
+  color: var(--main-pink-color);
+}
+
+.productsWrapper {
+  padding-bottom: 54px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--font-dark-color);
+}
+
+.productsWrapper h2 {
+  font-size: 54px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+}

@@ -1,0 +1,52 @@
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  color: black;
+  padding-bottom: 40px;
+}
+
+.container form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.container label {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--body-text-color);
+}
+
+.container input {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  border: solid 1px var(--body-text-color);
+}
+
+.container input:focus {
+  background: rgb(233, 227, 227);
+}
+
+.container textarea {
+  font-size: 18px;
+  padding: 10px;
+  outline: none;
+  border: solid 1px var(--body-text-color);
+  resize: none;
+  height: 219px;
+}
+
+.container textarea:focus {
+  background: rgb(233, 227, 227);
+}
+
+.container > div {
+  margin-top: 20px;
+  width: 40%;
+}
+
+.buttonHeight {
+  height: 40px;
+}

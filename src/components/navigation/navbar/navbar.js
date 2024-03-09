@@ -62,8 +62,8 @@ const NavBar = () => {
       <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
         <Link href='/'>Forside</Link>
         <Link href='/products'>Vores produkter</Link>
-        <Link href='/sundhed'>Spørg om sundhed</Link>
-        <Link href='/medlem'>Bliv medlem</Link>
+        <Link href='/health'>Spørg om sundhed</Link>
+        <Link href='/membership'>Bliv medlem</Link>
       </div>
 
       {/* CART */}
