@@ -1,0 +1,38 @@
+.formCompleteContainer {
+  background: var(--cta-color);
+  width: 100vw;
+  height: 100vh;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formCompleteContainer h2 {
+  font-size: 54px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.formCompleteContainer p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.formCompleteContainer p:nth-child(2) {
+  color: pink;
+  font-weight: bold;
+}
+
+.formCompleteContainer p:nth-child(5) {
+  margin-bottom: 44px;
+}
+
+.formCompleteContainerImage {
+  margin-bottom: 44px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: solid 10px var(--main-pink-color);
+}

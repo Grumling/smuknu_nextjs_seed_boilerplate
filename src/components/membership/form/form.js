@@ -13,7 +13,11 @@ const Form = async () => {
         <textarea name='message' required />
       </form>
       <div>
-        <Button title={'Opret'} link={'/'} className={styles.buttonHeight} />
+        <Button
+          title={'Opret'}
+          link={'formSuccess'}
+          className={styles.buttonHeight}
+        />
       </div>
     </div>
   )

@@ -1,11 +1,14 @@
 .page {
   background: var(--main-background-color);
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* min-height: 100vh; */
 }
+
+.colorChangePink {
+  color: var(--main-pink-color);
+}
+
+/* ------------------------------------------- */
+/*! PRODUCT WRAPPER */
+/* ------------------------------------------- */
 
 .productsWrapper {
   padding-bottom: 54px;
@@ -14,15 +17,7 @@
   color: var(--font-dark-color);
 }
 
-.productsWrapper h2 {
-  font-size: 54px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 46px;
-}
-
-.statementsWrapper {
+.reviewsWrapper {
   padding-left: 30px;
   padding-right: 30px;
   color: var(--font-dark-color);
@@ -31,42 +26,43 @@
   flex-direction: column;
 }
 
-.statementsWrapper h2 {
-  font-size: 54px;
-  font-weight: bold;
-  padding: 0 62px;
+/* ------------------------------------------- */
+/*! REVIEW SECTION */
+/* ------------------------------------------- */
+.reviewsWrapper {
+  width: 100%;
+  color: var(--body-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 72px;
+  /* border-bottom: solid 1px var(--main-pink-color); */
   text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 46px;
+  font-size: 20px;
 }
 
-.colorChangePink {
-  color: var(--main-pink-color);
-}
-
-.statementImage {
-  margin-bottom: 65px;
+.reviewImage {
+  margin-bottom: 40px;
   object-fit: cover;
   border-radius: 100%;
   border: solid 10px var(--main-pink-color);
 }
 
-.statemenTextbox {
-  text-align: center;
-  margin-bottom: 72px;
-  color: var(--body-text-color);
+.reviewextbox {
+  margin-bottom: 18px;
 }
 
-.statemenTextbox p {
-  font-size: 20px;
-}
-
-.statemenTextbox > div > p {
+.reviewextboxName {
   font-weight: bold;
-  margin-top: 18px;
 }
 
-.statemenTextbox > div {
-  border-bottom: solid 1px var(--main-pink-color);
-  padding-bottom: 24px;
+.reviewextboxByline {
+  margin-bottom: 24px;
+}
+
+.horizontalLine {
+  border: none;
+  border-top: 1px solid var(--main-pink-color);
+  width: 100%;
 }

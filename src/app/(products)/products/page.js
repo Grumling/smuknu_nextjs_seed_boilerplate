@@ -1,6 +1,6 @@
 import CtaProducts from '@/components/products/ctaProducts/ctaProducts'
 import styles from './page.module.css'
-import Product from '@/components/products/product/product'
+import AllProducts from '@/components/products/allProducts'
 
 export default function Products() {
   return (
@@ -10,8 +10,7 @@ export default function Products() {
         <h2>
           Alt er <p className={styles.colorChangePink}>skønhed</p>
         </h2>
-
-        <Product />
+        <AllProducts />
       </section>
     </main>
   )

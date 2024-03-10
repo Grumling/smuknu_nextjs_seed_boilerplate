@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "src": "/headers/abouthealth.jpg",
+    "alt": "Header"
+  },
+  {
+    "id": 2,
+    "src": "/headers/front.jpg",
+    "alt": "Header"
+  },
+  {
+    "id": 3,
+    "src": "/headers/products.jpg",
+    "alt": "Header"
+  },
+  {
+    "id": 4,
+    "src": "/headers/subscribers.jpg",
+    "alt": "Header"
+  }
+]

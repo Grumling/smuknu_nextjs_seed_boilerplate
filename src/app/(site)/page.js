@@ -3,65 +3,61 @@ import Product from '@/components/products/product/product'
 import styles from './page.module.css'
 import Cta from '@/components/frontpage/cta/cta'
 import Image from 'next/image'
+import HighlightedHeading from '@/components/misc/headers/highlightedHeading'
+import { useEffect, useState } from 'react'
+import Hero from '@/components/misc/heroe/hero'
 
 export default function Home() {
+  const [reviews, setReviews] = useState([])
+
+  useEffect(() => {
+    fetch('/api/reviews')
+      .then((response) => response.json())
+      .then((data) => setReviews(data))
+  }, [])
+
   return (
     <main className={styles.page}>
       <Cta />
-      {/* Choosen Products */}
+      {/* <Hero /> */}
+
       <section className={styles.productsWrapper}>
-        <h2>
-          Udvalgt <p className={styles.colorChangePink}>skønhed</p>
-        </h2>
+        {/* HEADLINE COMPONENT - CHANGE AS YOU PLEASE FOR EACH SITE */}
+        <HighlightedHeading
+          lineTitle1={'udvalgt'}
+          lineTitle2={'skønhed'}
+          classNameBottom={styles.colorChangePink}
+        />
 
         <Product />
       </section>
 
-      {/* Statements */}
-      <section className={styles.statementsWrapper}>
-        <h2>
-          <p className={styles.colorChangePink}>Skønheder</p> Udtaler
-        </h2>
-
-        <Image
-          className={styles.statementImage}
-          src='/reviews/phoebe_larsen.jpg'
-          alt='person'
-          width={150}
-          height={150}
+      {/* REVIEWS SECTION */}
+      <section className={styles.reviewsWrapper}>
+        <HighlightedHeading
+          lineTitle1={'skønheder'}
+          lineTitle2={'udtaler'}
+          classNameTop={styles.colorChangePink}
         />
-        <div className={styles.statemenTextbox}>
-          <p>
-            Jeg døjer rigtig meget med uren hud, og har prøvet alt muligt. Jeg
-            fik <b>Honest</b> produkter anbefalet som en 30 dags kur, hvor jeg
-            KUN skulle bruge den morgen og aften. Det har jeg så prøvet nu, og
-            jeg kan se en tydelig forskel. Et ekstra plus er, at den er dejlig
-            fugtgivende.
-          </p>
-          <div>
-            <p>Phoebe Larsen</p> Tilfreds Kunde
+        {reviews.map((reviews, index) => (
+          <div className={styles.reviewsWrapper} key={index}>
+            <Image
+              className={styles.reviewImage}
+              src={reviews.image}
+              alt='person'
+              width={150}
+              height={150}
+            />
+            <div className={styles.reviewextbox}>
+              <p>{reviews.description}</p>
+            </div>
+            <div>
+              <p className={styles.reviewextboxName}>{reviews.name}</p>
+              <p className={styles.reviewextboxByline}>{reviews.byline}</p>
+            </div>
+            <hr className={styles.horizontalLine} />
           </div>
-        </div>
-        <Image
-          className={styles.statementImage}
-          src='/reviews/kathrine_udgaard.jpg'
-          alt='person'
-          width={150}
-          height={150}
-        />
-        <div className={styles.statemenTextbox}>
-          <p>
-            Den hidtil bedste oplevelse med læbestifter! Jeg har fået så mange
-            komplimenter, efter jeg er begyndt at gå med denne dagligt. Udover
-            smuk farve, efterlader den læberne bløde og fugtige. Og det aller
-            vigtigste - slet ikke klistret på den der ubehagelige måde, som
-            nogen pomader kan. Den er et absolut &quot;must have&quot; i min
-            håndtaske!!
-          </p>
-          <div>
-            <p>Kathrine Udgaard</p> Tilfreds Kunde
-          </div>
-        </div>
+        ))}
       </section>
     </main>
   )

@@ -14,7 +14,7 @@ const Footer = async () => {
       <div className={styles.footerTopSection}>
         <h2>medlem?</h2>
         <p>Vær med i kundeklubben for nye videoer, rabatkoder og mere!</p>
-        <Button title={'Bliv medlem af kundeklubben'} link={''} />
+        <Button title={'Bliv medlem af kundeklubben'} link={'membership'} />
       </div>
       <div className={styles.footerBottomSection}>
         <div className={styles.soMeIcons}>

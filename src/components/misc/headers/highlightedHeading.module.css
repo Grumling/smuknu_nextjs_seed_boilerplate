@@ -1,0 +1,12 @@
+.highlightedHeadingWrapper {
+  /* margin-top: 46px; */
+  margin-bottom: 46px;
+}
+
+.highlightedHeadingWrapper h2 {
+  font-size: 54px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  /* margin-bottom: 46px; */
+}
