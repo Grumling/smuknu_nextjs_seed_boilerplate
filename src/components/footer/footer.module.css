@@ -52,3 +52,32 @@
   font-size: 18px;
   margin-bottom: 26px;
 }
+
+.footerTopSectionRight {
+  display: none;
+}
+
+/* ------------------------------------------- */
+/** RESPONSIVE */
+/* ------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .soMeIcons svg {
+    font-size: 80px;
+  }
+  .soMeIcons {
+    padding: 17px 120px 24px 120px;
+  }
+  .footerTopSection {
+    flex-direction: row;
+  }
+  .footerTopSectionRight {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 31px;
+    justify-content: space-evenly;
+    /* padding: 20px; */
+    margin-left: 49px;
+  }
+}

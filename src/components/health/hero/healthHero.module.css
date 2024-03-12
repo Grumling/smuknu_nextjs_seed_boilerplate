@@ -15,16 +15,17 @@
 
 .ctaInfoBox {
   width: 100%;
+  padding: 30px 0;
   position: absolute;
   display: grid;
   place-content: center;
-  background: var(--cta-color);
-  color: var(--main-pink-color);
+  background: var(--main-pink-color);
+  color: var(--font-light-color);
 }
 
 .ctaInfoBox > div {
   width: 100%;
-  padding: 44px 44px;
+  /*  padding: 44px 44px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,13 +36,23 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  padding: 45px 30px 21px 30px;
+  padding: 0 50px;
+  padding-bottom: 20px; /* space to the text below */
 }
 
 .ctaText {
-  color: var(--font-dark-color);
   font-size: 18px;
   font-weight: regular;
   text-align: center;
-  padding: 0 48px 46px 48px;
+  padding: 0 38px;
+}
+
+/* ------------------------------------------- */
+/** RESPONSIVE */
+/* ------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .ctaInfoBox {
+    width: 90%;
+  }
 }

@@ -1,12 +1,13 @@
 .formCompleteContainer {
   background: var(--cta-color);
-  width: 100vw;
-  height: 100vh;
-  padding: 0 30px;
+  width: 90%;
+  height: auto;
+  padding: 30px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 100;
 }
 
 .formCompleteContainer h2 {

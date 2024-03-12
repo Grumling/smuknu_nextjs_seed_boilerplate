@@ -7,14 +7,43 @@ import {
   FaYoutube,
 } from 'react-icons/fa6'
 import Button from '../button/button/button'
+import Image from 'next/image'
 
 const Footer = async () => {
   return (
     <div className={styles.footerContainer}>
       <div className={styles.footerTopSection}>
-        <h2>medlem?</h2>
-        <p>Vær med i kundeklubben for nye videoer, rabatkoder og mere!</p>
-        <Button title={'Bliv medlem af kundeklubben'} link={'membership'} />
+        <div className={styles.footerTopSectionLeft}>
+          <h2>medlem?</h2>
+          <p>Vær med i kundeklubben for nye videoer, rabatkoder og mere!</p>
+          <Button title={'Bliv medlem'} link={'membership'} />
+        </div>
+        <div className={styles.footerTopSectionRight}>
+          <Image
+            src='/reviews/kathrine_udgaard.jpg'
+            alt='gave'
+            width={150}
+            height={150}
+          />
+          <Image
+            src='/reviews/kathrine_udgaard.jpg'
+            alt='gave'
+            width={150}
+            height={150}
+          />
+          <Image
+            src='/reviews/kathrine_udgaard.jpg'
+            alt='gave'
+            width={150}
+            height={150}
+          />
+          <Image
+            src='/reviews/kathrine_udgaard.jpg'
+            alt='gave'
+            width={150}
+            height={150}
+          />
+        </div>
       </div>
       <div className={styles.footerBottomSection}>
         <div className={styles.soMeIcons}>

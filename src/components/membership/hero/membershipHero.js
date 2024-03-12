@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
-import styles from './membershipCta.module.css'
+import styles from './membershipHero.module.css'
 
-const MembershipCta = () => {
+const MembershipHero = () => {
   return (
     <div className={styles.ctaContainer}>
       <div className={styles.ctaInfoBox}>
@@ -25,4 +25,4 @@ const MembershipCta = () => {
   )
 }
 
-export default MembershipCta
+export default MembershipHero

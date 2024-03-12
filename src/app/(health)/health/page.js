@@ -1,11 +1,11 @@
 import HealthAccordion from '@/components/health/accordion/accordion'
 import styles from './page.module.css'
-import Healthcta from '@/components/health/healthCta/healthcta'
+import HealthHero from '@/components/health/hero/healthHero'
 
 export default function Health() {
   return (
     <main className={styles.page}>
-      <Healthcta />
+      <HealthHero />
       <HealthAccordion />
     </main>
   )

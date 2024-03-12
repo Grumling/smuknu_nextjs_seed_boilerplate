@@ -1,16 +1,16 @@
-import CtaProducts from '@/components/products/ctaProducts/ctaProducts'
+import Product from '@/components/products/products/product'
 import styles from './page.module.css'
-import AllProducts from '@/components/products/allProducts'
+import ProductsHero from '@/components/products/hero/ProductsHero'
 
 export default function Products() {
   return (
     <main className={styles.page}>
-      <CtaProducts />
+      <ProductsHero />
       <section className={styles.productsWrapper}>
         <h2>
           Alt er <p className={styles.colorChangePink}>skønhed</p>
         </h2>
-        <AllProducts />
+        <Product />
       </section>
     </main>
   )

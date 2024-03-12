@@ -1,11 +1,10 @@
 'use client'
-import Product from '@/components/products/product/product'
 import styles from './page.module.css'
-import Cta from '@/components/frontpage/cta/cta'
 import Image from 'next/image'
 import HighlightedHeading from '@/components/misc/headers/highlightedHeading'
 import { useEffect, useState } from 'react'
-import Hero from '@/components/misc/heroe/hero'
+import Hero from '@/components/frontpage/hero/hero'
+import Product from '@/components/products/products/product'
 
 export default function Home() {
   const [reviews, setReviews] = useState([])
@@ -18,8 +17,7 @@ export default function Home() {
 
   return (
     <main className={styles.page}>
-      <Cta />
-      {/* <Hero /> */}
+      <Hero />
 
       <section className={styles.productsWrapper}>
         {/* HEADLINE COMPONENT - CHANGE AS YOU PLEASE FOR EACH SITE */}
@@ -29,7 +27,8 @@ export default function Home() {
           classNameBottom={styles.colorChangePink}
         />
 
-        <Product />
+        {/* Products */}
+        <Product filterFunc={(product) => product.recommended} />
       </section>
 
       {/* REVIEWS SECTION */}

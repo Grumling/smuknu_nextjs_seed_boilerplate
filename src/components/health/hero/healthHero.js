@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
-import styles from './healthcta.module.css'
+import styles from './healthHero.module.css'
 
-const Healthcta = () => {
+const HealthHero = () => {
   return (
     <div className={styles.ctaContainer}>
       <div className={styles.ctaInfoBox}>
@@ -23,4 +23,4 @@ const Healthcta = () => {
   )
 }
 
-export default Healthcta
+export default HealthHero

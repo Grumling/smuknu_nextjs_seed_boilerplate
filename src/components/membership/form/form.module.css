@@ -3,6 +3,13 @@
   padding-right: 30px;
   color: black;
   padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formWrapper {
+  width: 100%;
 }
 
 .container form {
@@ -49,4 +56,20 @@
 
 .buttonHeight {
   height: 40px;
+}
+
+.container input:invalid {
+  border: 1px dashed var(--main-pink-color);
+}
+
+.container input:valid {
+  border: 1px solid var(--main-pink-color);
+}
+
+.container textarea:invalid {
+  border: 1px dashed var(--main-pink-color);
+}
+
+.container textarea:valid {
+  border: 1px solid var(--main-pink-color);
 }

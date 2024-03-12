@@ -1,4 +1,4 @@
-import MembershipCta from '@/components/membership/cta/membershipCta'
+import MembershipCta from '@/components/membership/hero/membershipHero'
 import styles from './page.module.css'
 import Form from '@/components/membership/form/form'
 

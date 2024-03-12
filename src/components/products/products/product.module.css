@@ -1,0 +1,81 @@
+.cardWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.ImageDisocuntContainer {
+  position: relative;
+  max-width: 300px;
+}
+
+.discountTag {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: var(--main-pink-color);
+  color: var(--font-light-color);
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.productImage {
+  width: 300px;
+  height: 300px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: block;
+  object-fit: contain;
+}
+
+.cardInfo {
+  margin-bottom: 46px;
+  max-width: 300px;
+  padding: 13px 10px 18px 13px;
+  border-top: solid 2px var(--main-pink-color);
+  background: var(--main-background-color);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 0 15px var(--box-shadow-color);
+}
+
+.cardTitle {
+  color: var(--font-dark-color);
+  margin-bottom: 7px;
+  font-size: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardPrice {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ------------------------------------------- */
+/** RESPONSIVE */
+/* ------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .cardWrapper {
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+}

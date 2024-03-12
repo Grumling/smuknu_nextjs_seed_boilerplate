@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Button from '@/components/button/button/button'
@@ -6,7 +7,8 @@ export default function FormComplete() {
   return (
     <main className={styles.formCompleteContainer}>
       <h2>Tak!</h2>
-      <p>Birthe Marie Hansen</p> {/* Den skal kunne passe form name here */}
+      {/* Den skal kunne passe form name herunder */}
+      <p>DIT NAVN HER</p>
       <p>Vi er enormt glade for at få dig som medlem.</p>
       <Image
         className={styles.formCompleteContainerImage}
