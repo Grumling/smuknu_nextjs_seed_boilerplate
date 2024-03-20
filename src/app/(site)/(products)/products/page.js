@@ -10,7 +10,7 @@ export default function Products() {
         <h2>
           Alt er <p className={styles.colorChangePink}>skønhed</p>
         </h2>
-        <Product />
+        <Product frontPage={false} />
       </section>
     </main>
   )

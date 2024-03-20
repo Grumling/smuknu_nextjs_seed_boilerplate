@@ -3,12 +3,13 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Button from '@/components/button/button/button'
 
-export default function FormComplete() {
+export default function FormComplete({ name }) {
+  console.log('FormComplete', name)
   return (
     <main className={styles.formCompleteContainer}>
       <h2>Tak!</h2>
       {/* Den skal kunne passe form name herunder */}
-      <p>DIT NAVN HER</p>
+      <p>{name}</p>
       <p>Vi er enormt glade for at få dig som medlem.</p>
       <Image
         className={styles.formCompleteContainerImage}

@@ -1,5 +1,6 @@
 import { QuicksandFont } from '@/utils/fonts'
 import './globals.css'
+import { BasketContextProvider } from '@/context/basket'
 
 export const metadata = {
   title: 'MediaCollege Denmark',
@@ -10,8 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={QuicksandFont.className}>
-        {/* <span>[root layout]</span> */}
-        {children}
+        <BasketContextProvider>{children}</BasketContextProvider>
       </body>
     </html>
   )

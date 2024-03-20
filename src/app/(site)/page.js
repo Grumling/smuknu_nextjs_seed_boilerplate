@@ -28,7 +28,7 @@ export default function Home() {
         />
 
         {/* Products */}
-        <Product filterFunc={(product) => product.recommended} />
+        <Product frontPage={true} />
       </section>
 
       {/* REVIEWS SECTION */}

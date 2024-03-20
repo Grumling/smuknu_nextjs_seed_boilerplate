@@ -1,24 +1,39 @@
 'use client'
-import Button from '@/components/button/button/button'
 import styles from './form.module.css'
-import FormComplete from '@/app/(membership)/formSuccess/page'
+import FormComplete from '@/app/(site)/(membership)/formSuccess/page'
 import { useState } from 'react'
 
 const Form = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState({})
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const { name, email, message } = e.target.elements
+    console.log(name.value, email.value, message.value)
+
+    let result = await fetch('/api/subscriber', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        message: message.value,
+      }),
+    }).then(async (res) => {
+      let result = await res.json()
+
+      setFormSubmitted(result.data)
+      console.log('Repsonse', result.data.name)
+    })
+
+    //setFormSubmitted(true)
+  }
   return (
     <div className={styles.container}>
-      {formSubmitted ? (
-        <FormComplete />
+      {formSubmitted.name ? (
+        <FormComplete name={formSubmitted.name} />
       ) : (
-        <form
-          className={styles.formWrapper}
-          onSubmit={(e) => {
-            e.preventDefault()
-            setFormSubmitted(true)
-          }}
-        >
+        <form className={styles.formWrapper} onSubmit={handleSubmit}>
           <label>Fulde Navn</label>
           <input type='text' name='name' required />
           <label>E-mail</label>
@@ -26,7 +41,9 @@ const Form = () => {
           <label>Ris og/eller ros</label>
           <textarea name='message' required />
           <div>
-            <button type='submit'>CLICK ME</button>
+            <button className={styles.formButton} type='submit'>
+              Send
+            </button>
           </div>
         </form>
       )}
